@@ -51,6 +51,12 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes shine {
+  0% {
+    background-position: 0 50%; }
+  100% {
+    background-position: 200% 50%; } }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -78,6 +84,11 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-in-out; }
+
+.btn--gradient {
+  color: #fff;
+  background-image: repeating-linear-gradient(90deg, #fdb8e9, #fff390 11%, #b3e3f5 22%, #cbecfa 31%, #f4cbdb 41%, #a5ccf9 57%, #ff9de6 74%, #f977c6 88%, #fdb8e9);
+  background-size: 200% 100%; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -119,7 +130,7 @@ body {
   transition: all 0.4s; }
 
 .btn--animated {
-  animation: moveInUp 1s ease-out 0.5s;
+  animation: moveInUp 1s ease-out 0.5s, shine 6s linear infinite;
   animation-fill-mode: backwards; }
 
 /* vh is % of total vertical height */
